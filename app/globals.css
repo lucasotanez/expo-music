@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .main {
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vh;
+  }
+}
+
+@layer components {
+  #navbar a {
+    @apply py-7 overflow-hidden px-2 text-center hover:drop-shadow-sm duration-100;
+  }
+
+  .source {
+    @apply w-full bg-gray-300 rounded-md px-4 my-1;
+  }
+}
