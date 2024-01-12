@@ -53,17 +53,17 @@ export default function Piano() {
       <div id='d3' onMouseDown={(e) => note(e, 146.8, 'pure')} className="key">
         <div id='d3#' onMouseDown={(e) => note(e, 155.6, 'sharp')} className="sharp-key"></div>
       </div>
-      <div id='e3' className="key"></div>
-      <div id='f3' className="key">
-        <div id='f3#' className="sharp-key"></div>
+      <div id='e3' onMouseDown={(e) => note(e, 164.8, 'pure')} className="key"></div>
+      <div id='f3' onMouseDown={(e) => note(e, 174.6, 'pure')} className="key">
+        <div id='f3#' onMouseDown={(e) => note(e, 185, 'sharp')} className="sharp-key"></div>
       </div>
-      <div id='g3' className="key">
-        <div id='g3#' className="sharp-key"></div>
+      <div id='g3' onMouseDown={(e) => note(e, 196, 'pure')} className="key">
+        <div id='g3#' onMouseDown={(e) => note(e, 207.7, 'sharp')} className="sharp-key"></div>
       </div>
-      <div id='a3' className="key">
-        <div id='a3#' className="sharp-key"></div>
+      <div id='a3' onMouseDown={(e) => note(e, 220, 'pure')} className="key">
+        <div id='a3#' onMouseDown={(e) => note(e, 233, 'sharp')} className="sharp-key"></div>
       </div>
-      <div id='b3' className="key"></div>
+      <div id='b3' onMouseDown={(e) => note(e, 246.9, 'pure')} className="key"></div>
 
       {/* Octave 4 */}
       <div id='c4' className="key">
