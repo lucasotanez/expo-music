@@ -1,10 +1,11 @@
 var composition: number[][];
+var itr = 0;
 
 export default function play(comp: number[][]) {
   composition = comp;
-  let firstNote = composition.pop();
+  itr = 0;
+  let firstNote = composition[itr++];
   if (firstNote) playNote(firstNote[0], firstNote[1])
-
 }
 
 export function playNote(frequency: number, duration: number) {
@@ -18,21 +19,14 @@ export function playNote(frequency: number, duration: number) {
   oscillator.connect(audioCtx.destination);
   oscillator.start();
 
-  var middle = {
-    C: 261,
-    D: 294,
-    E: 330,
-    F: 349,
-    G: 392,
-    A: 440,
-    B: 494
-  }
 
   setTimeout(
     function() {
       oscillator.stop();
-      if (composition.length > 0) {
-        let note = composition.pop();
+      if (itr < composition.length + 1) {
+        let note = composition[itr];
+        console.log(itr);
+        itr++;
         if (note) playNote(note[0], note[1]);
       }
 
