@@ -27,4 +27,12 @@
   .sharp-key {
     @apply absolute -right-1 md:-right-2 h-2/3 w-2 md:w-4 bg-black z-40
   }
+
+  .string {
+    @apply absolute border-1 border-black flex flex-row justify-between h-8 w-guitar-string absolute;
+  }
+
+  .string-box {
+    @apply w-full text-center border-1 border-black
+  }
 }
