@@ -29,7 +29,7 @@
   }
 
   .string {
-    @apply absolute border-1 border-black flex flex-row justify-between h-8 w-guitar-string absolute;
+    @apply absolute border-1 border-black flex flex-row justify-between h-8 w-guitar-string;
   }
 
   .string-box {

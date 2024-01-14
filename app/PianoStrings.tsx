@@ -20,7 +20,7 @@ export default function PianoStrings() {
     <>
       <div className="flex flex-col items-center relative w-5/6 h-48">
         <div className="absolute left-0 flex flex-row items-center">
-          <input type="checkbox" id="show-guitar-strings" value="show-strings" className="mr-3 w-6 h-6"></input>
+          <input type="checkbox" id="show-guitar-strings" value="show-strings" className="mx-3 w-6 h-6"></input>
           <label>Show Guitar Notes</label>
         </div>
         <div id="strings" className="hidden">
