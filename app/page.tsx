@@ -25,12 +25,7 @@ export default function Home() {
             }}>Play</button>
         </div>
         <div id="sources" className="flex flex-col w-5/6 m-auto mb-12">
-          <div className="source">e</div>
-          <div className="source">B</div>
-          <div className="source">G</div>
-          <div className="source">D</div>
-          <div className="source">A</div>
-          <div className="source">E</div>
+          <div className="source">_</div>
         </div>
       </div>
 
