@@ -60,17 +60,80 @@ export default function Piano() {
     document.getElementById("enable-binds")?.addEventListener('change', (e) => {
       if ((e.target as HTMLInputElement).checked) {
         pianoMode = true;
+        let sheet = document.getElementById('keymap-sheet');
+        if (sheet) sheet.style.display = 'flex';
       } else {
         pianoMode = false;
+        let sheet = document.getElementById('keymap-sheet');
+        if (sheet) sheet.style.display = 'none';
       }
     })
   }, [])
 
   return (
     <>
-      <div className="flex flex-row items-center w-5/6">
-        <input id='enable-binds' type='checkbox' className="w-6 h-6 my-8 mx-3"></input><label>Enable Keybinds</label>
+      <div className="hidden md:flex flex-row items-center w-5/6 my-6">
+        <input id='enable-binds' type='checkbox' className="w-6 h-6 my-4 mx-3"></input><label>Enable Keybinds</label>
       </div>
+      <div id="keymap-sheet" className="flex-col w-full md:w-1/2 bg-gray-100 p-4 rounded-lg mb-4 hidden">
+        <div className="flex flex-row items-center">
+          <div className="flex flex-col items-center text-xs font-bold mr-2">
+            <div>Note:</div>
+            <div>Key:</div>
+          </div>
+          <div className="flex flex-row w-full justify-evenly text-xs">
+            <div className="flex flex-col items-center">
+              <div>C4</div>
+              <div>A</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div>C4#</div>
+              <div>S</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div>D4</div>
+              <div>D</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div>D4#</div>
+              <div>F</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div>E4</div>
+              <div>G</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div>F4</div>
+              <div>H</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div>F4#</div>
+              <div>J</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div>G4</div>
+              <div>K</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div>G4#</div>
+              <div>L</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div>A4</div>
+              <div>;</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div>A4#</div>
+              <div>'</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div>B4</div>
+              <div>&rarr;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div id='board' className="w-11/12 xl:w-5/6 h-32 xl:h-40 bg-gray-100 mb-12 sm:flex flex-row relative hidden">
 
         {/* Octave 2 */}
